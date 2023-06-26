@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 10px;
+        }
+
+        .ShowGov {
+            width: 300px;
+        }
+
+        .ShowInfo {
+            position: relative;
+            background-color: #ddd;
+            border: 2px solid #aaa;
+            width: 300px;
+            height: 100px;
+            margin-top: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .ShowMap {
+            margin-top: 10px;
+        }
+
+        .info,
+        .map {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        li span {
+            font-weight: bold;
+        }
+
+        li span:first-child {
+            font-size: large;
+        }
+
+        li address {
+            display: inline;
+        }
+
+        select:has(#taipei:checked)~.ShowInfo .Taipei,
+        select:has(#taipei:checked)~.ShowMap .Taipei {
+            visibility: visible;
+        }
+
+        select:has(#taichung:checked)~.ShowInfo .Taichung,
+        select:has(#taichung:checked)~.ShowMap .Taichung {
+            visibility: visible;
+        }
+
+        select:has(#kaohsiung:checked)~.ShowInfo .Kaohsiung,
+        select:has(#kaohsiung:checked)~.ShowMap .Kaohsiung {
+            visibility: visible;
+        }
+
+        select:has(#hualien:checked)~.ShowInfo .Hualien,
+        select:has(#hualien:checked)~.ShowMap .Hualien {
+            visibility: visible;
+        }
+
+        select:has(#taitung:checked)~.ShowInfo .Taitung,
+        select:has(#taitung:checked)~.ShowMap .Taitung {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <select name="SelectGov" class="ShowGov">
+        <option value="TaipeiGov" id="taipei" selected>台北市政府</option>
+        <option value="TaichungGov" id="taichung">台中市政府</option>
+        <option value="KaohsiungGov" id="kaohsiung">高雄市政府</option>
+        <option value="HualienGov" id="hualien">花蓮縣政府</option>
+        <option value="TaitungGov" id="taitung">台東縣政府</option>
+    </select>
+    <div class="ShowInfo">
+        <ul>
+            <li class="Taipei info">
+                <span>台北市政府</span>
+                <br>
+                <span>地址：</span>
+                <address>台北市信義區市府路1號</address>
+                <br>
+                <span>電話：</span>(02)2720-8889
+            </li>
+            <li class="Taichung info">
+                <span>台中市政府</span>
+                <br>
+                <span>地址：</span>
+                <address>台中市西屯區臺灣大道三段99號</address>
+                <br>
+                <span>電話：</span>(04)2228-9111
+            </li>
+            <li class="Kaohsiung info">
+                <span>高雄市政府</span>
+                <br>
+                <span>地址：</span>
+                <address>高雄市苓雅區四維三路2號</address>
+                <br>
+                <span>電話：</span>(07)336-8333
+            </li>
+            <li class="Hualien info">
+                <span>花蓮縣政府</span>
+                <br>
+                <span>地址：</span>
+                <address>花蓮市府前路17號</address>
+                <br>
+                <span>電話：</span>(03)822-7171
+            </li>
+            <li class="Taitung info">
+                <span>台東縣政府</span>
+                <br>
+                <span>地址：</span>
+                <address>臺東市中山路276號</address>
+                <br>
+                <span>電話：</span>(089)326141
+            </li>
+        </ul>
+    </div>
+    <div class="ShowMap">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8791377050043!2d121.56312897963235!3d25.03817540315368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb75c721995%3A0xd44afb95ba7fa42b!2zVGFpcGVpIENpdHkgSGFsbCwgTm8uIDHluILlupzot6_kv6HnvqnljYDlj7DljJfluIIxMTA!5e0!3m2!1szh-TW!2stw!4v1679741183533!5m2!1szh-TW!2stw"
+            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" class="Taipei map"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.282091502484!2d120.64237842214595!3d24.16183772893727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d84daa07441%3A0x2c5e7459c2aaf71a!2z6Ie65Lit5biC5pS_5bqc!5e0!3m2!1szh-TW!2stw!4v1679742034430!5m2!1szh-TW!2stw"
+            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" class="Taichung map"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d856.5860280234298!2d120.31177450855499!3d22.62073222447285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e049b9f1760a5%3A0x344465d114abb19!2z6auY6ZuE5biC5pS_5bqcIOWbm-e2reihjOaUv-S4reW_gw!5e0!3m2!1szh-TW!2stw!4v1679742122843!5m2!1szh-TW!2stw"
+            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" class="Kaohsiung map"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29160.43297154487!2d121.59152945375435!3d23.993865863459465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34689fd3acc6d975%3A0x6d731cb7d9f51362!2z6Iqx6JOu57ij5pS_5bqc!5e0!3m2!1szh-TW!2stw!4v1679742179327!5m2!1szh-TW!2stw"
+            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" class="Hualien map"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.3086213938836!2d121.14524631452032!3d22.753925232025818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fb93f0ada035f%3A0x5e626d24891eaea1!2z6Ie65p2x57ij5pS_5bqc!5e0!3m2!1szh-TW!2stw!4v1679742216767!5m2!1szh-TW!2stw"
+            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" class="Taitung map"></iframe>
+    </div>
+</body>
+
+</html>

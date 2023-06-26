@@ -1,0 +1,872 @@
+/* 字型 */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Indie+Flower&family=Poltawski+Nowy&family=Rubik+Iso&display=swap');
+/* 'Poltawski Nowy'; */
+
+/* --- header --- */
+.header {
+    background-color: black;
+    margin: 0px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+
+
+.header-1 ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px;
+    display: block;
+    font-size: 1vw;
+}
+
+/* 最上面選項設定 */
+.header ul li {
+    display: inline-block;
+    /* border: 1px solid white; */
+    margin-left: 10px;
+    margin-right: 10px;
+
+
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+    /* height: 100%;    */
+    /* width: 100%; */
+}
+
+/* ------------------------ */
+
+/* --- 標題列 選項 --- */
+.header-1 {
+    /* border: 2px solid blue; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* ------------------------ */
+
+/* --- 標題列 logo --- */
+/* 原始圖片 400*130 */
+.hearder-logo {
+    /* border: 2px solid red; */
+    width: 200px;
+    height: 60px;
+    padding: 5px;
+    display: flex;
+}
+
+.hearder-logo img {
+    /* border: 2px solid yellow; */
+    width: 200px;
+    height: 60px;
+}
+
+/* 標題列 選單 縮放 */
+@media (max-width:768px), print{
+    .header-1{
+        display: none;
+    }
+}
+
+/* 標題列按鈕設定 */
+.btn-98,
+.btn-98 *,
+.btn-98 :after,
+.btn-98 :before,
+.btn-98:after,
+.btn-98:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+
+.btn-98 {
+    -webkit-tap-highlight-color: transparent;
+    /* -webkit-appearance: button; */
+    background-color: #000;
+    background-image: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    line-height: 0.5;
+    margin: 0;
+    /* -webkit-mask-image: -webkit-radial-gradient(#000, #fff); */
+    padding: 0;
+}
+
+.btn-98:disabled {
+    cursor: default;
+}
+
+.btn-98:-moz-focusring {
+    outline: auto;
+}
+
+.btn-98 svg {
+    display: block;
+    /* vertical-align: middle; */
+}
+
+.btn-98 [hidden] {
+    display: none;
+}
+
+.btn-98 {
+    --thickness: 1px;
+    background: none;
+    box-sizing: border-box;
+    -webkit-clip-path: polygon(0 0,
+            100% 0,
+            100% calc(100% + var(--thickness)),
+            0 calc(100% + var(--thickness)));
+    clip-path: polygon(0 0,
+            100% 0,
+            100% calc(100% + var(--thickness)),
+            0 calc(100% + var(--thickness)));
+    display: block;
+    font-weight: 900;
+    /* -webkit-mask-image: none; */
+    padding: 2px 0;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.btn-98:before {
+    background: #fff;
+    bottom: calc(var(--thickness) * -1);
+    content: "";
+    display: block;
+    height: var(--thickness);
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+}
+
+.btn-98:hover:before {
+    -webkit-animation: slide 0.5s ease;
+    animation: slide 0.5s ease;
+}
+
+@-webkit-keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+
+    51% {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+
+    51% {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* --- 漢堡選單 --- */
+.header-2 {
+    /* border: 1px solid lightcoral; */
+    display: flex;
+    justify-content: center;
+    /* width: 300px; */
+}
+
+/* 漢堡選單RWD */
+@media (min-width:768px), print{
+    .header-2{
+        display: none;
+    }
+}
+
+
+.ham {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, .3);
+    display: block;
+    position: relative;
+}
+
+.ham-origin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.ham-bar {
+    height: 2px;
+    width: 26px;
+    position: absolute;
+    background: white;
+    margin: -1px 0 0 -13px;
+    transition: all .5s;
+}
+
+.ham-bar--top {
+    transform: translateY(-6px);
+}
+
+.ham-bar--bottom {
+    transform: translateY(6px);
+}
+
+#nav-toggle {
+    display: none;
+}
+
+#nav-toggle:checked~.ham .ham-bar--middle {
+    opacity: 0;
+}
+
+#nav-toggle:checked~.ham .ham-bar--top {
+    transform: rotate(-45deg);
+}
+
+#nav-toggle:checked~.ham .ham-bar--bottom {
+    transform: rotate(45deg);
+}
+
+/* Nav Style */
+
+.menu {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    padding: 10px;
+    background: rgba(0, 0, 0, .3);
+    /* height: 400px; */
+    /* bottom: 0; */
+    z-index: 1;
+    
+    /* 用 translate 把選單藏到畫面右邊去 */
+    transform: translateX(100%);
+    transition: transform .5s;
+    display: none;
+
+    /* 額外設定 */
+    /* position: relative; */
+}
+
+#nav-toggle:checked~.menu {
+    transform: none;
+    display: block;
+}
+
+.menu-list {
+    /* border: 1px solid red; */
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    position: relative;
+    flex-direction: column
+}
+
+/* .menu-item+.menu-item {
+    margin-top: 20px;
+} */
+
+.menu-link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 2vw;
+    line-height: 2;
+    font-family: 'Poltawski Nowy'; 
+}
+
+.menu-link:hover{
+    color: gray;
+}
+
+
+
+
+
+/* -------------------------- */
+
+.buy-KV {
+    position: relative;
+}
+
+/* 主照片控制 */
+.buy-KV img {
+    width: 100%;
+}
+
+/* 主照片文字 */
+.buy-KV p {
+    /* border: 2px solid rebeccapurple; */
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    font-weight: bold;
+    font-size: 5vw;
+    color: aliceblue;
+}
+
+/* 主照片連結 */
+.buy-KV a {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    width: 15%;
+    height: 5%;
+    font-size: 2vw;
+    position: absolute;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    top: 60%;
+    left: 50%;
+}
+
+.buy-KV a:hover {
+    background-color: rgba(0, 0, 0, 0.61);
+    color: rgba(255, 255, 255, 0.829);
+    border: #000;
+}
+
+/* ------------------------------------------- */
+
+
+/* 四種車型 */
+/* .motorcycle-style{
+    position: relative;
+} */
+
+
+/* 復古車型 */
+.modern-classic {
+    /* border: 2px solid red; */
+    position: relative;
+}
+
+.modern-classic img {
+    width: 100%;
+
+}
+
+.modern-classic p {
+    position: absolute;
+    top: 25%;
+    left: 65%;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 3vw;
+}
+
+.modern-classic div {
+    position: absolute;
+    width: 5vw;
+    top: 31%;
+    left: 66%;
+    border-top: 2px solid red;
+}
+
+.modern-classic a {
+    position: absolute;
+    text-decoration: none;
+    top: 35%;
+    left: 66%;
+    /* color: white; */
+    font-size: 1vmax;
+    width: 12%;
+    height: 5%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 2px solid rgb(151, 2, 2);
+}
+
+/* 競速車型 */
+.roadsters {
+    position: relative;
+}
+
+.roadsters img {
+    width: 100%;
+}
+
+.roadsters p {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    font-weight: bold;
+    font-size: 3vw;
+}
+
+.roadsters div {
+    position: absolute;
+    width: 5vw;
+    top: 32%;
+    left: 12%;
+    border-top: 2px solid red;
+}
+
+.roadsters a {
+    position: absolute;
+    text-decoration: none;
+    top: 36%;
+    left: 12%;
+    /* color: white; */
+    font-size: 1vmax;
+    width: 12%;
+    height: 5%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 2px solid rgb(151, 2, 2);
+}
+
+/* 旅行車型 */
+.adventure {
+    position: relative;
+
+}
+
+.adventure img {
+    width: 100%;
+
+}
+
+.adventure p {
+    position: absolute;
+    top: 25%;
+    left: 70%;
+    font-weight: bold;
+    font-size: 3vw;
+}
+
+.adventure div {
+    position: absolute;
+    width: 5vw;
+    top: 32%;
+    left: 72%;
+    border-top: 2px solid red;
+}
+
+.adventure a {
+    position: absolute;
+    text-decoration: none;
+    top: 36%;
+    left: 72%;
+    /* color: white; */
+    font-size: 1vmax;
+    width: 12%;
+    height: 5%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 2px solid rgb(151, 2, 2);
+}
+
+/* 大排量 */
+.rocket {
+    position: relative;
+
+}
+
+.rocket img {
+    width: 100%;
+}
+
+.rocket p {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    font-weight: bold;
+    font-size: 3vw;
+}
+
+.rocket div {
+    position: absolute;
+    width: 5vw;
+    top: 31%;
+    left: 12%;
+    border-top: 2px solid red;
+}
+
+.rocket a {
+    position: absolute;
+    text-decoration: none;
+    top: 35%;
+    left: 11%;
+    /* color: white; */
+    font-size: 1vmax;
+    width: 12%;
+    height: 5%;
+    /* background-color: #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 2px solid rgb(151, 2, 2);
+
+}
+
+/* .rocket a:hover{
+    color: #d63a3a;
+} */
+
+/* 探索按鈕點擊設定  點擊前會隱藏 */
+.collapse:not(.show) {
+    display: none;
+}
+
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s ease;
+}
+
+
+
+/* 四個探索按鈕設定 */
+.btn-80,
+.btn-80 *,
+.btn-80 :after,
+.btn-80 :before,
+.btn-80:after,
+.btn-80:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+
+.btn-80 {
+    -webkit-tap-highlight-color: transparent;
+    /* -webkit-appearance: button; */
+    background-color: #000;
+    background-image: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    font-weight: 900;
+    line-height: 1.5;
+    margin: 0;
+    /* -webkit-mask-image: -webkit-radial-gradient(#000000, #fff); */
+    padding: 0;
+}
+
+.btn-80:disabled {
+    cursor: default;
+}
+
+.btn-80:-moz-focusring {
+    outline: auto;
+}
+
+.btn-80 svg {
+    display: block;
+    /* vertical-align: middle; */
+}
+
+.btn-80 [hidden] {
+    display: none;
+}
+
+.btn-80 {
+    border: 2px solid;
+    border-radius: 999px;
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+    padding: 1.2rem 3rem;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.btn-80 span {
+    font-weight: 900;
+    mix-blend-mode: difference;
+}
+
+.btn-80:before {
+    background: #fff;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.btn-80:hover:before {
+    -webkit-animation: progress-bar 1.2s;
+    animation: progress-bar 1.2s;
+}
+
+@-webkit-keyframes progress-bar {
+    0% {
+        opacity: 1;
+        width: 0;
+    }
+
+    10% {
+        opacity: 1;
+        width: 15%;
+    }
+
+    25% {
+        opacity: 1;
+        width: 25%;
+    }
+
+    40% {
+        opacity: 1;
+        width: 35%;
+    }
+
+    55% {
+        opacity: 1;
+        width: 75%;
+    }
+
+    60% {
+        opacity: 1;
+        width: 100%;
+    }
+
+    to {
+        opacity: 0;
+        width: 100%;
+    }
+}
+
+@keyframes progress-bar {
+    0% {
+        opacity: 1;
+        width: 0;
+    }
+
+    10% {
+        opacity: 1;
+        width: 15%;
+    }
+
+    25% {
+        opacity: 1;
+        width: 25%;
+    }
+
+    40% {
+        opacity: 1;
+        width: 35%;
+    }
+
+    55% {
+        opacity: 1;
+        width: 75%;
+    }
+
+    60% {
+        opacity: 1;
+        width: 100%;
+    }
+
+    to {
+        opacity: 0;
+        width: 100%;
+    }
+}
+
+
+/* ------------------------------------ */
+
+/* 頁面最下面設定 */
+
+.floot {
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* icon 橫向排列 */
+.floot-1 ul {
+    display: flex;
+}
+
+/* icon 做開一點 */
+.floot-1 ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* 嘗試icon 變化 */
+/* 想碰到icon有所變化 */
+/* .floot-1 ul li:nth-of-type(1):hover {
+    border: 2px solid rebeccapurple;
+}
+
+.floot-1 ul li:nth-of-type(2):hover {
+    border: 2px solid rebeccapurple;
+}
+
+.floot-1 ul li:nth-of-type(3):hover {
+    border: 2px solid rebeccapurple;
+}
+
+.floot-1 ul li:nth-of-type(4):hover {
+    border: 2px solid rebeccapurple;
+} */
+
+
+/* 頁面最下面粗體分隔線 */
+.floot-2 {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    border-top: 5px solid black;
+    height: 50px;
+    width: 95vw;
+}
+
+/* 最下面 粗體線下方超連結 */
+.floot-2 a {
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 10px;
+    color: black;
+
+}
+
+/* 滑鼠移動到 粗體線下方超連結時 */
+.floot-2 a:hover {
+    color: gray;
+}
+
+/* 最下面 標籤位子 */
+.floot-2 p {
+    text-align: end;
+}
+
+/* ---------------------------- */
+
+
+/* 選購頁面小卡 */
+
+.collapse-old{
+    /* border: 5px solid red; */
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+
+
+    /* flex-wrap: wrap;  */
+    /* 可以設定 多少寬度向下排列  */
+
+}
+
+.collapse-old-1{
+    /* border: 2px solid blue; */
+    /* width: 25%; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow:2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* 卡片碰觸特效 */
+.collapse-old-1:hover{
+    box-shadow:5px 5px 10px 4px rgba(0, 0, 0, 0.4);
+    /* border-radius:5%; */
+    /* transform: scale(0.9); */
+    transform: rotate(2deg);
+
+}
+
+
+.collapse-old-1 img{
+    width: 100%;
+    /* border: 1px solid lawngreen; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.collapse-old-2{
+    /* border: 2px solid yellow; */
+    border-top:1px solid black ;
+    width: 100%;
+    text-align: center;
+}
+
+
+.collapse-old-2 p{
+  line-height: 1.5;
+}
+
+
+.collapse-old-2 p:nth-of-type(1){
+    font-size:bolder;
+    font-size: 3vw;
+    /* font-family:'Poltawski Nowy'; */
+    /* color: aquamarine; */
+    /* text-align: center; */
+}
+
+.collapse-old-2 p:nth-of-type(2){
+    font-size:bolder;
+    font-size:2vw;
+    /* color: bisque; */
+}
+
+.collapse-old-2 ul{
+    padding: 15%;
+    font-size:1vw;
+    color: rgba(0, 0, 0, 0.646);
+    
+}
+
+.collapse-old-2 ul li{
+    list-style-type:disc;
+    text-align: start;
+    margin: 2px;
+}
+

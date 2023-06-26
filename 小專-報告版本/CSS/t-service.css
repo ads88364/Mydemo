@@ -1,0 +1,541 @@
+/* 字型 */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Indie+Flower&family=Poltawski+Nowy&family=Rubik+Iso&display=swap');
+/* 'Poltawski Nowy'; */
+
+/* --- header --- */
+.header {
+    background-color: black;
+    margin: 0px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.header-1 ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px;
+    display: block;
+    font-size: 1vw;
+    /* header 字體大小 */
+}
+
+/* 最上面選項設定 */
+.header ul li {
+    display: inline-block;
+    /* border: 1px solid white; */
+    margin-left: 10px;
+    margin-right: 10px;
+
+
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+    /* height: 100%;    */
+    width: 100%;
+}
+
+/* ------------------------ */
+
+/* --- 標題列 選項 --- */
+.header-1 {
+    /* border: 2px solid blue; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* 標題列 選單 縮放 */
+@media (max-width:768px),
+print {
+    .header-1 {
+        display: none;
+    }
+}
+
+
+/* ------------------------ */
+
+/* --- 標題列 logo --- */
+/* 原始圖片 400*130 */
+.hearder-logo {
+    /* border: 2px solid red; */
+    width: 200px;
+    height: 60px;
+    padding: 5px;
+    display: flex;
+}
+
+.hearder-logo img {
+    /* border: 2px solid yellow; */
+    width: 200px;
+    height: 60px;
+}
+
+
+
+
+/* 標題列按鈕設定 */
+.btn-98,
+.btn-98 *,
+.btn-98 :after,
+.btn-98 :before,
+.btn-98:after,
+.btn-98:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+
+.btn-98 {
+    -webkit-tap-highlight-color: transparent;
+    /* -webkit-appearance: button; */
+    background-color: #000;
+    background-image: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    line-height: 0.5;
+    margin: 0;
+    /* -webkit-mask-image: -webkit-radial-gradient(#000, #fff); */
+    padding: 0;
+}
+
+.btn-98:disabled {
+    cursor: default;
+}
+
+.btn-98:-moz-focusring {
+    outline: auto;
+}
+
+.btn-98 svg {
+    display: block;
+    /* vertical-align: middle; */
+}
+
+.btn-98 [hidden] {
+    display: none;
+}
+
+.btn-98 {
+    --thickness: 1px;
+    background: none;
+    box-sizing: border-box;
+    -webkit-clip-path: polygon(0 0,
+            100% 0,
+            100% calc(100% + var(--thickness)),
+            0 calc(100% + var(--thickness)));
+    clip-path: polygon(0 0,
+            100% 0,
+            100% calc(100% + var(--thickness)),
+            0 calc(100% + var(--thickness)));
+    display: block;
+    font-weight: 900;
+    /* -webkit-mask-image: none; */
+    padding: 2px 0;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.btn-98:before {
+    background: #fff;
+    bottom: calc(var(--thickness) * -1);
+    content: "";
+    display: block;
+    height: var(--thickness);
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+}
+
+.btn-98:hover:before {
+    -webkit-animation: slide 0.5s ease;
+    animation: slide 0.5s ease;
+}
+
+@-webkit-keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+
+    51% {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+
+    51% {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* 漢堡選單RWD */
+@media (min-width:768px), print{
+    .header-2{
+        display: none;
+    }
+}
+
+
+.ham {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, .3);
+    display: block;
+    position: relative;
+}
+
+.ham-origin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.ham-bar {
+    height: 2px;
+    width: 26px;
+    position: absolute;
+    background: white;
+    margin: -1px 0 0 -13px;
+    transition: all .5s;
+}
+
+.ham-bar--top {
+    transform: translateY(-6px);
+}
+
+.ham-bar--bottom {
+    transform: translateY(6px);
+}
+
+#nav-toggle {
+    display: none;
+}
+
+#nav-toggle:checked~.ham .ham-bar--middle {
+    opacity: 0;
+}
+
+#nav-toggle:checked~.ham .ham-bar--top {
+    transform: rotate(-45deg);
+}
+
+#nav-toggle:checked~.ham .ham-bar--bottom {
+    transform: rotate(45deg);
+}
+
+/* Nav Style */
+
+.menu {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    padding: 10px;
+    background: rgba(0, 0, 0, .3);
+    /* height: 400px; */
+    /* bottom: 0; */
+    z-index: 1;
+    
+    /* 用 translate 把選單藏到畫面右邊去 */
+    transform: translateX(100%);
+    transition: transform .5s;
+    display: none;
+
+    /* 額外設定 */
+    /* position: relative; */
+}
+
+#nav-toggle:checked~.menu {
+    transform: none;
+    display: block;
+}
+
+.menu-list {
+    /* border: 1px solid red; */
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    position: relative;
+    flex-direction: column
+}
+
+/* .menu-item+.menu-item {
+    margin-top: 20px;
+} */
+
+.menu-link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 2vw;
+    line-height: 2;
+    font-family: 'Poltawski Nowy'; 
+}
+
+.menu-link:hover{
+    color: gray;
+}
+/* ------------------------- */
+
+/* body背景圖片測試 */
+
+
+
+/* --------------------------- */
+
+
+/* floot頁面最下面設定 */
+
+.floot {
+    width: 100%;
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* margin-top: 3px; */
+}
+
+/* icon 橫向排列 */
+.floot-1 ul {
+    display: flex;
+}
+
+/* icon 做開一點 */
+.floot-1 ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* 嘗試icon 變化 */
+/* 想碰到icon有所變化 */
+/* .floot-1 ul li:nth-of-type(1):hover {
+    border: 2px solid rebeccapurple;
+}
+
+.floot-1 ul li:nth-of-type(2):hover {
+    border: 2px solid rebeccapurple;
+}
+
+.floot-1 ul li:nth-of-type(3):hover {
+    border: 2px solid rebeccapurple;
+}
+
+.floot-1 ul li:nth-of-type(4):hover {
+    border: 2px solid rebeccapurple;
+} */
+
+
+/* 頁面最下面粗體分隔線 */
+.floot-2 {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    border-top: 5px solid black;
+    height: 50px;
+    width: 95vw;
+}
+
+/* 最下面 粗體線下方超連結 */
+.floot-2 a {
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 10px;
+    color: black;
+
+}
+
+/* 滑鼠移動到 粗體線下方超連結時 */
+.floot-2 a:hover {
+    color: gray;
+}
+
+/* 最下面 標籤位子 */
+.floot-2 p {
+    text-align: end;
+}
+
+/* ---------------------------- */
+
+.KV {
+    /* border: 2px solid red; */
+    /* background-image: url('../img/thanuj-mathew-WxgACJnkCJ8-unsplash.jpg'); */
+    /* opacity: 0.3; */
+    /* background-color: #000; */
+
+
+    position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    /* height: 100vh; */
+}
+
+.KV-1 {
+    /* position: absolute; */
+    /* border: 2px solid rgb(128, 255, 0); */
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+
+.KV img {
+    width: 100%;
+    opacity: 0.9;
+}
+
+.KV-map {
+    border: 2px solid rgb(0, 0, 0);
+    position: absolute;
+    width: 50vw;
+    height: 70%;
+    margin-right: 2%;
+}
+
+
+/* 地圖控制 */
+.KV-map iframe {
+    position: absolute;
+    visibility: hidden;
+}
+
+.KV-word {
+    /* border: 2px solid red; */
+    position: absolute;
+    width: 43vw;
+    height: 70%;
+    margin-right: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ShowGov {
+    width: 100%;
+    height: 4vh;
+}
+
+.motoinfo {
+    /* border: 2px solid blue; */
+    position: relative;
+    width: 100%;
+    height: 30%;
+}
+
+.info {
+    position: absolute;
+    visibility: hidden;
+    line-height: 1.5;
+    /* padding-top: 4%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #0000009d;
+    width: 100%;
+    height: 90%;
+    color: #fff;
+    font-size: 1.5vw;
+}
+
+.motoinfoimg {
+    /* border: 2px solid yellow; */
+    /* width: 100%; */
+    /* height: auto; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+
+}
+
+.infoimg {
+    position: absolute;
+    visibility: hidden;
+    width: 80%;
+    height: 80%;
+}
+
+/* 選擇控制 */
+select:has(#taipei:checked)~.motoinfo .Taipei,
+select:has(#taipei:checked)~.motoinfoimg .TP,
+.KV-word:has(#taipei:checked)~.KV-map .TP {
+    visibility: visible;
+}
+
+select:has(#taichung:checked)~.motoinfo .Taichung,
+select:has(#taichung:checked)~.motoinfoimg .TC,
+.KV-word:has(#taichung:checked)~.KV-map .TC {
+    visibility: visible;
+}
+
+select:has(#kaohsiung:checked)~.motoinfo .Kaohsiung,
+select:has(#kaohsiung:checked)~.motoinfoimg .KU,
+.KV-word:has(#kaohsiung:checked)~.KV-map .KU {
+    visibility: visible;
+}
+
+
+/* ------------------------------------------------ */
+
+/* 進入畫面特效 */
+body .loading-text{
+    /* border: 2px solid red; */
+    font-size: 40px;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+
+    /* 隔著一層也可以點擊後方功能 */
+    pointer-events: none;
+}
+
+
+.bb{
+    background: url(../img/LOGO/LOGO1.jpg) center/cover;
+    background-color:black;
+    filter: blur(0px);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+}
