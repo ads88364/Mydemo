@@ -1,0 +1,275 @@
+$font-big: 2.25rem;
+$font-normal: 2rem;
+$font-small: 1.75rem;
+$font-xs: 1.5rem;
+$main-color: #0b7597;
+$main-color2: #EABA71;
+
+#memberout {
+  background-image: url(../../../../server/public/img/wave1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  // display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 30px;
+
+  .t1 {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: $main-color ;
+    text-shadow: -1px -2px 0 #ffffff,
+              1px -1px 0 #ffffff,
+              -1px 1px 0 #ffffff,
+              1px 1px 0 #ffffff;
+    
+    margin-bottom: 20px;
+    margin-top: 45px;
+  }
+
+  .t2 {
+    font-size: $font-normal;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    // font-weight: bold;
+  }
+
+  .member {
+    background-color: rgba(255, 255, 255, 0.571);
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    border: 0px solid rgba(255, 255, 255, 0.18);
+    box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    border-radius: 17px;
+    -webkit-border-radius: 17px;
+    color: rgb(0, 0, 0);
+    min-width: 90%;
+
+    padding: 20px;
+    margin-bottom: 150px;
+
+
+    .member1 {
+      .ant-row {
+        justify-content: space-evenly;
+        padding: 100px;
+      }
+
+
+      .input-group,
+      .info-group {
+        margin-bottom: 10px;
+
+        label {
+          display: inline-block;
+          margin-bottom: 5px;
+        }
+
+        input {
+          display: inline-block;
+          width: 100%;
+          padding: 5px;
+          margin-bottom: 5px;
+        }
+
+      }
+
+      .memberprc {
+        // margin-top: 50px;
+        // margin-left: 175px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .membername {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .membername1 {
+            font-size: $font-small;
+            font-weight: bold;
+          }
+
+          .membername2 {
+            font-size: $font-xs;
+          }
+        }
+
+        .welcome {
+          font-size: $font-normal;
+        }
+
+        .memberBtn {
+          display: flex;
+          flex-direction: column
+        }
+
+        button {
+          padding: 10px 20px;
+          background-color: $main-color;
+          color: #ffffff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-top: 10px;
+          width: 150px;
+          font-size: $font-xs;
+
+        }
+      }
+
+      .avatar-upload-label {
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .avatar-upload-label input {
+        display: none;
+      }
+
+      .avatar-preview {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: #6d74b6 5px solid;
+        background-color: #ffffff;
+        margin-top: 30px;
+      }
+
+      .avatar-preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-color: #ffffff;
+      }
+
+      .memberformdiv {
+        legend {
+          font-size: $font-normal ;
+          font-weight: bold;
+          padding: 30px;
+          display: flex;
+          text-align: center;
+        }
+
+        fieldset {
+          width: 60vw;
+        }
+
+        label,
+        div {
+          font-size: $font-small;
+          // padding: 0px 70px;
+        }
+
+        input[type=text],
+        input[type=date],
+        input[date],
+        select {
+
+          font-size: $font-small;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        .displaybtn {
+          display: flex;
+          flex-direction: row-reverse;
+
+          button {
+            padding: 10px 20px;
+            background-color: $main-color;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            // width: 100px;
+            left: 230px;
+            font-size: $font-xs;
+          }
+        }
+      }
+
+      .memberform {
+        legend {
+          font-size: $font-normal ;
+          font-weight: bold;
+          padding: 30px;
+          display: flex;
+          text-align: center;
+        }
+
+        fieldset {
+          width: 60vw;
+        }
+
+        label,
+        div {
+          font-size: $font-small;
+          // padding: 0px 70px;
+        }
+
+        input[type=text],
+        input[type=date],
+        select {
+
+          font-size: $font-small;
+          display: inline-block;
+          border: none;
+          border-radius: 4px;
+          box-sizing: border-box;
+
+          &:focus {
+            outline: none;
+          }
+
+          border-bottom: 1.5px solid $main-color;
+          background-color: #0b749700;
+        }
+        .displaybtn {
+          display: flex;
+          flex-direction: row-reverse;
+
+          button {
+            padding: 10px 20px;
+            background-color: $main-color;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            // width: 100px;
+            left: 230px;
+            font-size: $font-xs;
+          }
+        }
+
+
+        
+      }
+
+
+
+      .ReactModal__Content.ReactModal__Content--after-open {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 600px;
+        margin-top: 50px;
+      }
+    }
+  }
+
+}

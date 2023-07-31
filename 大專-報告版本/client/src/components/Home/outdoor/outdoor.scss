@@ -1,0 +1,48 @@
+
+$stroke-width: 5px;
+
+html{
+  scroll-behavior: smooth;
+}
+.logo{
+  background-color: black;
+}
+//文字的部分
+text {
+   stroke-width: $stroke-width;
+   stroke-dasharray: 900;
+   stroke-dashoffset: -900;
+   animation: text 4s forwards 1;
+   animation-delay: 1s;
+  }
+  
+  .underline{
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    animation: underline 4s forwards 1;
+    animation-delay: 5s;
+  }
+
+//文字的動態
+@keyframes text {
+ 75% {
+  fill: transparent;
+  stroke-dashoffset: 0;
+  stroke-width: $stroke-width;//先留著外框框
+ }
+ 100% {
+  fill: #fff; //讓他上色～
+  stroke-dashoffset: 0;
+  stroke-width: 0;//把外框框消掉，不然會變很肥
+ }
+}
+
+//下底線的動態
+@keyframes underline {
+ 75% {
+  stroke-dashoffset: 0;
+ }
+ 100% {
+  stroke-dashoffset: 0;
+ }
+}

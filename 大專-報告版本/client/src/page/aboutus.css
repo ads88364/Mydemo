@@ -1,0 +1,94 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+.h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px;
+    color: #111;
+}
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3,
+.bgimg-4,
+.bgimg-5 {
+    /* background-image: url("../助養/P1090921.JPG");      */
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimg-1 {
+    background-image: url("https://msocean.com.tw/wp-content/uploads/2020/03/0001-DSC03189.jpg");
+}
+.bgimg-2 {
+    background-image: url("https://img.freepik.com/free-photo/silhouette-surfing-dusk-spraying-blue-beauty-generated-by-ai_188544-30986.jpg?w=1060&t=st=1686627588~exp=1686628188~hmac=1a97fd51f7d5b3bf48a336e7e7c53316168d9e9390371811f90624cb4b15a8f0");
+    opacity: 0.7;
+}
+.bgimg-3 {
+    background-image: url("https://img.freepik.com/premium-photo/male-rock-climbing-pulling-up-doing-step-reaching-top-side-view-panoramic-mountain-view-sunset-copy-space_10069-7121.jpg?w=1060");
+    opacity: 0.8;
+}
+.bgimg-4 {
+    background-image: url("https://img.freepik.com/premium-photo/freestyle-snowboarder-is-jumping-with-snowboard-starry-night-sky_470336-1952.jpg?w=900");
+    opacity: 0.8;
+}
+.bgimg-5 {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NYMnWXev8v89IkLrwYagFDBTesudBIHEEQ&usqp=CAU");
+    opacity: 0.8;
+}
+
+
+
+.caption{
+    position: absolute;
+    left: 0;
+    margin-top: 30vh;
+    /* top: 40%; */
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption span.ptopic {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 3rem;
+    letter-spacing: 10px;
+}
+/* 灰藍底色框 */
+.alsty {
+    background-color: rgb(63, 77, 92);
+    text-align: center;
+    padding: 50px 80px;
+    text-align: justify;
+}
+.whitexth {
+    text-align: center;
+    color: #f7f7f7;
+    font-size: 2rem;
+}
+.whitexthp {
+    color: #f7f7f7;
+    font-size: 1.5rem;
+}
+
+.blaxthp{
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}

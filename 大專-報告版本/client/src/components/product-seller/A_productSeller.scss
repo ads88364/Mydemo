@@ -1,0 +1,34 @@
+@import '../../assets/var.scss';
+
+.psg-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  // background-color:$main-color ;
+  color: $main-color;
+  font-size: $font-big;
+}
+#P-seller-page {
+  .product-body {
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+  a {
+    width: auto;
+  }
+}
+
+.notpd{
+  text-align: center;
+  margin: 200px 0;
+}
+
+
+

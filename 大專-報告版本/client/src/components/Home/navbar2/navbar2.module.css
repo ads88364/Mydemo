@@ -1,0 +1,214 @@
+/* --- header --- */
+.header {
+    /* background: linear-gradient(180deg, rgb(38, 121, 196), rgb(255, 255, 255)); */
+    /* border: 2px solid red; */
+    /* margin-bottom: 5px; */
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+}
+
+.header-button-icon ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* border: 2px solid red; */
+}
+
+/* ------------------------ */
+
+/* --- 標題列 選項 --- */
+.header-button-icon {
+    /* border: 2px solid blue; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+
+
+/* 標題列 選單 縮放 */
+/* @media (max-width:768px), print{
+    .header-button-icon{
+        display: none;
+    }
+} */
+
+/* ------------------------ */
+
+/* --- 標題列 logo --- */
+/* 原始圖片 400*130 */
+.header-logo {
+    /* border: 2px solid red; */
+    width: 200px;
+    height: 80px;
+    /* padding: 5px; */
+    display: flex;
+    margin-left: 10px;
+    
+}
+
+.header-logo img { 
+/* border: 2px solid yellow; */
+height: 100%;
+}
+
+.header-logo a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #000000;
+}
+
+
+/* 標題列按鈕特效 */
+.btn-98 {
+    font-size: 60px;
+    display: block;
+    position: relative;
+    line-height: 40px;
+
+    &::before {
+        content: "";
+        display: block;
+        border-bottom: 3px solid;
+        /* background-color: rgb(255, 255, 255); */
+        position: absolute;
+        height: 3px;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        z-index: 1;
+        transition: width 0.5s;
+    }
+
+    &:hover {
+        &::before {
+            width: 100%;
+            left: 0;
+            transition: width position 0.5s;
+        }
+    }
+}
+
+/* -------------------------- */
+/* icon 底下選項 */
+.header-icon{
+    /* border: 2px solid red; */
+    height: 100%;
+    margin-right: 10px;
+}
+
+.header-icon .iconMove{
+    /* border: 2px solid blue; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-icon ul {
+    /* border: 2px solid red; */
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+.header-icon li{
+    height: 100%;
+    /* width: 100%; */
+}
+
+/* 選單 style 設定 */
+ul.drop-menu{
+    /* border: 2px solid red; */
+    position: absolute;
+    /* top: 16%; */
+    right: 0%;
+    padding: 0;
+    z-index: 100;
+}
+
+ul.drop-menu li a{
+    color:rgb(0, 0, 0);
+    font-size: 1.3rem;
+    margin-right: 15px;
+    line-height: 2;
+}
+
+/* 選單出現跟消失 */
+ul.drop-menu li{
+    /* border: 1px solid blue; */
+    display: none;
+    /* 消失 */
+}
+li:hover > ul.drop-menu li{
+    display: block;
+    /* 出現 */
+}
+
+/* ======================================= */
+/* MENU2 第二種特效 */
+li:hover > ul.drop-menu.limenu-2{
+    perspective: 1000px;
+}
+li:hover > ul.drop-menu.limenu-2 li{
+    opacity: 0;
+    transform-origin: top center;
+    animation-name: limenu2;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu.limenu-2 li:nth-child(1){
+    /* animation-duration: 300ms; */
+    animation-delay: 0;
+}
+li:hover > ul.drop-menu.limenu-2 li:nth-child(2){
+    /* animation-duration: 600ms; */
+    animation-delay: 150ms;
+}
+li:hover > ul.drop-menu.limenu-2 li:nth-child(3){
+    /* animation-duration: 900ms; */
+    animation-delay: 300ms;
+}
+li:hover > ul.drop-menu.limenu-2 li:nth-child(4){
+    /* animation-duration: 1200ms; */
+    animation-delay: 450ms;
+}
+li:hover > ul.drop-menu.limenu-2 li:nth-child(5){
+    /* animation-duration: 1500ms; */
+    animation-delay: 600ms;
+    
+}
+
+@keyframes limenu2 {
+    0%{
+        opacity: 0;
+        transform: rotateX(-90deg)
+    }
+    30%{
+        transform: rotateX(60deg)
+    }
+    100%{
+        opacity: 1;
+        transform: rotateX(0deg)
+    }
+}
+
+
+/* ================================================= */
+/* ===== header JS效果 =====*/

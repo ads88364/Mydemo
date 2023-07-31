@@ -1,0 +1,14 @@
+.BS_BtnStyle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 30px;
+}
+
+.BS_BtnStyle .BS_BtnStyle_space .BS_BtnStyle_Button{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}

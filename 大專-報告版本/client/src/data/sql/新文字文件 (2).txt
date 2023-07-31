@@ -1,0 +1,73 @@
+資料表:
+product
+
+資料欄位:	
+productAccount	
+productCategoryChild	
+cityCounty	
+area	
+productName	
+rent	
+deposit	
+rentalStatus
+shippingMethod		
+
+對應內容:
+含數字小寫英文的隨機帳戶
+cycling
+花蓮縣  隨機生成台灣縣市
+秀林鄉  隨機生成對應縣市區域
+潛水手套  
+400  隨機生成金額 100~1500
+500 隨機生成金額 100~1000
+未出租  隨機生成出租中 和未出租
+7-11,OK超商,宅配,店到店  這4種幫我隨機1~4種
+
+productAccount: 
+3x7Y90
+B28y4Sd
+a6ZQ2M
+P39e5iR
+f2KjT4Y1
+dCn5G0Wx8
+R9zKuqX75
+
+
+productName:
+2D 直握把 卡榫式調節登山杖
+3D 直握把 卡榫式+外鎖式調節 摺疊登山杖
+3D 直握把 鋁合金外鎖式調節登山杖
+流明 10m 照度登山健行頭燈 (手動充電)
+36_D173277_p19201361
+流明 25m 照度登山健行頭燈12
+卡榫式+外鎖式調節 摺疊登山杖
+高機能二節式旋鈕調節登山杖
+登山健行柔軟充氣式枕頭
+T 型握把 卡榫式調節登山杖
+
+下面是我的種類配對 幫我依照productName 去找value 配對出適合的productCategoryChild	
+{ "value": "climbingEquipment", "label": "攀岩器材" },
+      { "value": "trekkingPoles", "label": "登山杖" },
+      { "value": "gripEquipment", "label": "登山配件" },
+      { "value": "backpack", "label": "登山背包" },
+      { "value": "hikingShoes", "label": "登山鞋" }
+
+金額亂數一點    然後縣市 區域都幫我用台灣的縣市對應區域隨機(直接生成縣市名稱 不要用select)    還有出租狀態也要不同
+幫我生成sql語法 
+
+
+productId 1~7
+
+imagemap表中
+在幫我生成
+欄位imageSrc 
+mountain/2D 直握把 卡榫式調節登山杖1 (1).jpg 有1~3   id都是36
+mountain/3D 直握把 卡榫式+外鎖式調節 摺疊登山杖1 (1).jpg 有1~3   id都是37
+mountain/3D 直握把 鋁合金外鎖式調節登山杖.jpg 有1   id都是38
+mountain/15 流明 10m 照度登山健行頭燈 (手動充電)1 (1).jpg 有1~3   id都是39
+mountain/36_D173277_p19201361 (1).jpg 有1~5   id都是40
+mountain/80 流明 25m 照度登山健行頭燈12 (1).jpg 有1~2   id都是41
+mountain/卡榫式+外鎖式調節 摺疊登山杖 (1).jpg 有1~2   id都是42
+mountain/高機能二節式旋鈕調節登山杖1 (1).jpg 有1~4   id都是43
+mountain/登山健行柔軟充氣式枕頭1 (1).jpg 有1~4   id都是44
+mountain/T 型握把 卡榫式調節登山杖1 (1).jpg 有1~3   id都是45

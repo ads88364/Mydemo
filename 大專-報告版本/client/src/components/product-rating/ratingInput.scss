@@ -1,0 +1,91 @@
+@import '../../assets/var.scss';
+
+.rating-btn {
+  button {
+    font-size: $font-normal;
+    background-color: $main-color;
+    color: white;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+
+    &:active {
+      background-color: darken($main-color, 10%);
+    }
+  }
+  p {
+    font-size: $font-normal;
+    color: orange;
+    margin: 0;
+  }
+}
+
+.ratinginput {
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  border: 1px solid $main-color;
+  z-index: 9999;
+  height: 350px;
+  width: 500px;
+  background-color: white;
+
+  .RI-title {
+    background-color: $main-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+    button {
+      background-color: white;
+      height: 40px;
+      width: 40px;
+      border: 1px solid $main-color;
+      border-radius: 10px;
+      font-size: $font-xs;
+      &:active {
+        border: 2px solid $main-color;
+      }
+    }
+  }
+  .ratingStar {
+    margin-bottom: 20px;
+  }
+
+  .RI-text {
+    textarea {
+      border-radius: 10px;
+      padding: 10px;
+      height: 80px;
+      width: 80%;
+      font-size: $font-small;
+      resize: vertical; /* 可以調整垂直尺寸 */
+      text-align: left;
+      white-space: pre-wrap; /* 或者使用 white-space: break-word; */
+    }
+  }
+
+  .RI-bottom {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    button {
+      font-size: $font-xs;
+      margin: 5px;
+      background-color: white;
+      border-radius: 5px;
+      color: $main-color;
+      border: 1px solid $main-color;
+      &:active {
+        background-color: darken($main-color, 1%); /* 讓按鈕稍微變深10% */
+        color: white;
+      }
+    }
+  }
+}

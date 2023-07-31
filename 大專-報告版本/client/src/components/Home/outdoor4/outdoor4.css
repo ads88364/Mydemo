@@ -1,0 +1,71 @@
+/*  ======================== 主頁畫面4:關於我們 ===================== */
+.outdoor4 {
+    /* border: 2px solid black; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outdoor4 img {
+    width: 100%;
+}
+
+.outdoor4-wordBox{
+    /* border: 2px solid red; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.outdoor4-wordBox p:nth-child(1){
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+    margin-bottom: 10%;
+}
+.outdoor4-wordBox p:nth-child(2){
+    color: rgba(0, 0, 0, 0.68);
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+/* ========================================= */
+/* 左邊邊框 */
+.outdoor4-left{
+    border: 5px solid rgb(246, 227, 23);
+    width: 600px;
+    height: 250px;
+    position: absolute;
+    clip-path: polygon(0 0, 14% 0, 70% 100%, 0% 100%);
+    top:43%;
+    left: 15%;
+}
+/* 右邊邊框 */
+.outdoor4-right{
+    border: 5px solid rgb(255, 234, 0);
+    width: 360px;
+    height: 370px;
+    position: absolute;
+    clip-path: polygon(5% 0, 100% 0%, 100% 100%, 65% 100%);
+    top:35%;
+    right: 15%;
+}
+
+.btn-about{
+    position: absolute;
+    background-color: #000;
+    width: 200px;
+    height: 50px;
+    text-decoration: none;
+    top: 68%;
+    left: 54%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+.btn-about-p{
+    color: white;
+    font-size: 1.5rem;
+}

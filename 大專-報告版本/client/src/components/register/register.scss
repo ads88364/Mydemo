@@ -1,0 +1,73 @@
+$font-big: 2.25rem;
+$font-normal: 2rem;
+$font-small: 1.75rem;
+$font-xs: 1.5rem;
+$font-xxs:1.25rem;
+$main-color: #0b7597;
+
+#registerout {
+    background-color: #abc7d0;
+    padding: 30px;
+    
+    .slick-track{
+        height:600px;
+        margin: 30px;
+        .slick-slide{
+            width: 80%;
+        }
+    }
+    .reginertitle{
+        font-size: $font-big;
+        margin-bottom: 20px;
+        color: #0b7597;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+#register {
+    border: #0b7597 3px solid;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    height: 780px;
+
+
+    img {
+        height: 600px;
+        object-fit: cover;
+    }
+
+    .ant-form-item-required {
+        font-size: $font-small;
+    }
+
+    label {
+        font-weight: bolder;
+        color: #16778a
+    }
+
+    .ant-input-affix-wrapper {
+
+        border: 2px solid #16778a;
+    }
+
+    .ant-picker {
+        border: 2px solid #16778a;
+    }
+
+    .ant-select-selector {
+        border: 2px solid #16778a;
+    }
+
+    #loginform2 {
+        .ant-input {
+            border: 2px solid #16778a;
+        }
+    }
+    Button{
+        font-size: $font-xxs;
+        // height:"100%"
+    }
+}

@@ -1,0 +1,115 @@
+@import '../../assets/var.scss';
+
+.product-body {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .pd-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    width: 60%;
+    border: 2px solid $main-color;
+    border-radius: 10px;
+    padding: 0px 10px;
+  }
+
+  .pd-body-l {
+    height: 80%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    margin-left: 30px;
+
+    img {
+      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+    }
+  }
+
+  .pd-body-m {
+    width: 65%;
+    // height: 80%;
+    .pd-body-m-title {
+      display: flex;
+      align-items: center;
+
+      p {
+        margin: 0 10px 0 0;
+        font-size: $font-small;
+        &:first-child {
+          font-size: $font-normal;
+          font-weight: bold;
+          color: $main-color;
+          opacity: 1;
+        }
+        &:last-child {
+          opacity: 0.6;
+        }
+      }
+    }
+
+    p {
+      font-size: $font-small;
+      margin: 0;
+      margin-bottom: 20px;
+      color: black;
+      opacity: 0.8;
+    }
+
+    // button {
+    //   border-radius: 10px;
+    //   background-color: #fff;
+    //   border: 1px solid rgba(126, 126, 126, 0.866);
+    //   font-size: $font-xs;
+    //   i {
+    //     margin: 0px 5px;
+    //   }
+    //   &:first-child {
+    //     background-color: $main-color;
+    //     border-color: $main-color;
+    //     color: white;
+    //     width: 110px;
+    //     margin-right: 10px;
+    //     &:hover {
+    //       opacity: 0.8;
+    //     }
+    //   }
+    // }
+    .pd-body-btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    a {
+      text-align: center;
+      padding: 0 20px;
+      width: 180px;
+      border: 1px solid $main-color;
+      border-radius: 10px;
+      font-size: 24px;
+      color: $main-color;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.059);
+      }
+      i {
+        margin-left: 5px;
+        color: black;
+      }
+    }
+    .cartFontSize {
+      height: 36px !important;
+      padding: 0 10px;
+      font-size: 24px;
+      &:last-child {
+        height: 50px !important;
+      }
+    }
+  }
+}

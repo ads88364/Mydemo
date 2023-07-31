@@ -1,0 +1,27 @@
+[
+    {
+        "method":"7-11取貨"
+        ,"value":"SevenEleven"
+        ,"tradeTypePriceId":"65"
+    },
+    {
+        "method":"全家取貨"
+        ,"value":"FamilyMart"
+        ,"tradeTypePriceId":"65"
+    },
+    {
+        "method":"OK取貨"
+        ,"value":"OKMart"
+        ,"tradeTypePriceId":"55"
+    },
+    {
+        "method":"萊爾富"
+        ,"value":"Hilife"
+        ,"tradeTypePriceId":"55"
+    },
+    {
+        "method":"黑貓宅急便"
+        ,"value":"BlackCat"
+        ,"tradeTypePriceId":"130"
+    }
+]

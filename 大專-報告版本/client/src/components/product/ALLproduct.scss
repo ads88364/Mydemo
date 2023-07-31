@@ -1,0 +1,156 @@
+@import '../../assets/var.scss';
+
+body,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  list-style: none;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.navbar {
+  height: 80px;
+  background-color: rgba(189, 255, 233, 0.05);
+}
+
+main.container {
+  padding: 10px;
+  width: 1200px;
+}
+
+/* 產品區 */
+
+.product {
+  // display: flex;
+  // justify-content: space-between;
+
+  @media screen and (max-width: 991px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .pd-link {
+    width: 400px;
+  }
+}
+
+/* 商品 */
+
+.rental {
+  width: 100%;
+}
+
+#pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  a {
+    margin: 0px 10px;
+  }
+
+  span {
+    margin: 0px 10px;
+  }
+}
+
+// 商品頁面 pd-item.html
+.breadcrumb {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+  div {
+    display: flex;
+    align-items: center;
+  }
+  a {
+    font-size: $font-small;
+    color: rgba(0, 0, 0, 0.808);
+    margin: 10px;
+    position: relative;
+    span {
+      font-weight: bold;
+      position: absolute;
+      left: -25px;
+      bottom: 1px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.product-text {
+  margin-top: 100px;
+  p {
+    font-size: $font-big;
+    font-weight: bold;
+  }
+  .p-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  table {
+    width: 95%;
+    border: 3px solid $main-color;
+    border-radius: 10px;
+    border-spacing: 0;
+    tr {
+      td {
+        padding: 0px 15px;
+        padding-bottom: 10px;
+        height: 100px;
+        font-size: 1.75vw;
+      }
+      td:first-child {
+        margin: 0;
+        width: 20%;
+        background-color: $main-color;
+        color: white;
+      }
+    }
+  }
+}
+
+.ant-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  height: 50px;
+  .ant-pagination-item {
+    font-size: $font-normal;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ant-pagination-item-active {
+    border-color: #0b749700;
+    a {
+      color: $main-color;
+    }
+  }
+}
+
+.fade-in-container {
+  opacity: 0.03;
+  transition: opacity 0.5s;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.container{
+  width: 1320px;
+}

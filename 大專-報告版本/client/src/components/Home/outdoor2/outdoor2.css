@@ -1,0 +1,152 @@
+/* ================ 主頁頁面2配置 =============== */
+/* outdoor2 照片設定 */
+.outdoor2 {
+
+  position: relative;
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+  width: 100%;
+  height: 100vh;
+  /* height: 700px; */
+  background: #3333333d;
+
+}
+
+/* 負片效果 */
+/* filter:invert(40%) */
+/* 亮度效果 */
+/* filter:brightness(40%); */
+/* 模糊效果(邊緣) */
+/* filter: blur(2px); */
+/* 透明度 */
+/* filter: opacity(80%); */
+/* 影像對比度 */
+/* filter: contrast(60%); */
+/* 復古 */
+/* filter:sepia(0.4); */
+
+
+/* 新設定 */
+/* @import url('https://fonts.goosgleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
+
+:root {
+  /* --left-bg-color: rgba(102, 166, 240, 0.7); */
+  /* --right-bg-color: rgba(43, 43, 43, 0.8); */
+  --left-btn-hover-color: rgb(80, 80, 80);
+  --right-btn-hover-color: rgb(1, 38, 112);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+}
+
+.split>h1 {
+  /* border: 2px solid red; */
+  font-size: 4rem;
+  color: rgba(0, 0, 0, 0.479);
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+ .btn-100 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: #fbfbfb;
+  border: #000000 solid 0.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 15rem;
+  padding: 1.5rem;
+}
+
+.split.left .btn-100:hover {
+  background-color: var(--left-btn-hover-color);
+  border-color: var(--left-btn-hover-color);
+}
+
+.split.right .btn-100:hover {
+  background-color: var(--right-btn-hover-color);
+  border-color: var(--right-btn-hover-color);
+}
+
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  left: 0;
+  background: url('../../../../../server/public/img/home/8.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.split.left::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--left-bg-color);
+}
+
+.split.right {
+  right: 0;
+  background: url('../../../../../server/public/img/home/7.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.split.right::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--right-bg-color);
+}
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+  transition: all var(--speed) ease-in-out;
+}
+
+.hover-left .left {
+  width: var(--hover-width);
+}
+.hover-left .right {
+  width: var(--other-width);
+}
+
+.hover-right .right {
+  width: var(--hover-width);
+}
+.hover-right .left {
+  width: var(--other-width);
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+    top: 30%;
+  }
+
+  .btn-100 {
+    padding: 1.2rem;
+    width: 12rem;
+  }
+}

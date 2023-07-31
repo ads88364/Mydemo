@@ -1,0 +1,268 @@
+/* --- header --- */
+.header {
+    /* background-color:transparent; */
+    margin-top: 0px;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+    transition: 0.8s;
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+    /* height: 100%;    */
+    /* width: 100%; */
+}
+
+.header-button-icon ul li a {
+    text-decoration: none;
+    color: rgb(254, 254, 254);
+    display: block;
+    font-size: 2rem;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+/* ------------------------ */
+
+/* --- 標題列 選項 --- */
+.header-button-icon {
+    /* border: 2px solid blue; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+
+
+/* 標題列 選單 縮放 */
+/* @media (max-width:768px), print{
+    .header-button-icon{
+        display: none;
+    }
+} */
+
+/* ------------------------ */
+
+/* --- 標題列 logo --- */
+/* 原始圖片 400*130 */
+.header-logo {
+    /* border: 2px solid red; */
+    width: 200px;
+    height: 70px;
+    display: flex;
+    margin-left: 10px;
+}
+
+.header-logo img {
+    /* border: 2px solid yellow; */
+    width: 200px;
+    height: 70px;
+}
+
+.header-logo a {
+    text-decoration: none;
+    /* font-size: 3vw; */
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+
+/* 標題列按鈕特效 */
+.btn-98 {
+    font-size: 60px;
+    display: block;
+    position: relative;
+    line-height: 40px;
+
+    &::before {
+        content: "";
+        display: block;
+        border-bottom: 3px solid;
+        /* background-color: white; */
+        position: absolute;
+        height: 3px;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        z-index: -1;
+        transition: width 0.5s;
+    }
+
+    &:hover::before {
+        width: 100%;
+        left: 0;
+        transition: width position 0.5s;
+    }
+
+}
+
+/* -------------------------- */
+/* icon 底下選項 */
+.header-icon {
+    /* border: 2px solid blue; */
+    height: 100%;
+    margin-right: 15px;
+    /* display: flex; */
+    /* align-items: center */
+}
+
+.header-icon .iconMove {
+    /* border: 2px solid red; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-icon ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* .header-icon ul li{
+    margin-right: 3px;
+} */
+
+/* 選單 style 設定 */
+ul.drop-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0;
+}
+
+ul.drop-menu li a {
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    margin-right: 15px;
+    line-height: 2;
+}
+
+/* 選單出現跟消失 */
+ul.drop-menu li {
+    display: none;
+    /* 消失 */
+}
+
+li:hover>ul.drop-menu li {
+    display: block;
+    /* 出現 */
+}
+
+/* ======================================= */
+/* MENU2 第二種特效 */
+li:hover>ul.drop-menu.limenu-2 {
+    perspective: 1000px;
+}
+
+li:hover>ul.drop-menu.limenu-2 li {
+    opacity: 0;
+    transform-origin: top center;
+    animation-name: limenu2;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+li:hover>ul.drop-menu.limenu-2 li:nth-child(1) {
+    /* animation-duration: 300ms; */
+    animation-delay: 0;
+}
+
+li:hover>ul.drop-menu.limenu-2 li:nth-child(2) {
+    /* animation-duration: 600ms; */
+    animation-delay: 150ms;
+}
+
+li:hover>ul.drop-menu.limenu-2 li:nth-child(3) {
+    /* animation-duration: 900ms; */
+    animation-delay: 300ms;
+}
+
+li:hover>ul.drop-menu.limenu-2 li:nth-child(4) {
+    /* animation-duration: 1200ms; */
+    animation-delay: 450ms;
+}
+
+li:hover>ul.drop-menu.limenu-2 li:nth-child(5) {
+    /* animation-duration: 1500ms; */
+    animation-delay: 600ms;
+
+}
+
+@keyframes limenu2 {
+    0% {
+        opacity: 0;
+        transform: rotateX(-90deg)
+    }
+
+    30% {
+        transform: rotateX(60deg)
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg)
+    }
+}
+
+/* ===== header JS效果 =====*/
+.changeBGColor {
+    background-color: rgb(255, 255, 255);
+}
+
+/* 選項變色 */
+.changeBGColor .btn-98 {
+    color: #000;
+}
+
+/* 下彈選單變色 */
+.changeBGColor .iconList {
+    color: #000;
+}
+
+/* icon變色 */
+.changeBGColor .iconMove {
+    color: #000;
+}
+
+/* === hover特效 === */
+.changeBGColor .btn-98:hover {
+    color: #14B09B;
+    transition: 0.5s;
+}
+
+.changeBGColor .iconList:hover {
+    color: #14B09B;
+    transition: 0.5s;
+}
+
+.changeBGColor .iconMove:hover {
+    color: #14B09B;
+    transition: 0.5s;
+}
+
+/* LOGO圖片變化 */
+/* 黑色一開始消失 */
+.header-logo .headerLogoImg img:nth-child(2){
+    display: none;
+}
+/* 下滑白色消失 */
+.changeBGColor .header-logo .headerLogoImg img:nth-child(1){
+    display: none;
+}
+/* 下滑黑色出現 */
+.changeBGColor .header-logo .headerLogoImg img:nth-child(2){
+    display: block;
+}

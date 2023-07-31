@@ -1,0 +1,42 @@
+[
+  {
+    "value": "camping",
+    "label": "露營用品",
+    "subOptions": ["帳篷", "睡袋", "野餐桌椅", "戶外爐具", "防潮墊"]
+  },
+  {
+    "value": "mountain",
+    "label": "登山用品",
+    "subOptions": ["背包", "登山鞋", "攀岩器材", "抓握器材", "登山配件"]
+  },
+  {
+    "value": "waterSports",
+    "label": "水上活動用品",
+    "subOptions": ["浮潛用具", "游泳用具", "獨木舟", "划艇", "帆板"]
+  },
+  {
+    "value": "cycling",
+    "label": "單車旅行用品",
+    "subOptions": ["單車", "車燈", "安全帽", "行李架", "單車配件"]
+  },
+  {
+    "value": "skiing",
+    "label": "滑雪用品",
+    "subOptions": ["雪板", "滑雪板", "滑雪服", "雪靴", "滑雪配件"]
+  },
+  {
+    "value": "diving",
+    "label": "潛水用品",
+    "subOptions": ["潛水面鏡", "潛水呼吸管", "潛水蛙鞋", "浮潛套裝", "潛水配件"]
+  },
+  {
+    "value": "sportsLeisure",
+    "label": "運動休閒用品",
+    "subOptions": ["球類運動", "健身器材", "戶外遊憩", "休閒娛樂", "運動配件"]
+  },
+  {
+    "value": "photography",
+    "label": "攝影器材",
+    "subOptions": ["相機", "鏡頭", "三腳架", "攝影配件", "拍攝器材"]
+  }
+]

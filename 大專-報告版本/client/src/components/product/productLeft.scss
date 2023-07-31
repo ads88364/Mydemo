@@ -1,0 +1,151 @@
+@import '../../assets/var.scss';
+
+#filter {
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 991px) {
+    // height: 0;
+    // opacity: 0;
+    &:hover {
+      height: 100%;
+      opacity: 1;
+    }
+  }
+
+  .filterMenu {
+    border: 2px solid $main-color;
+    height: 30px;
+    width: 1000px;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    padding: 15px;
+
+    form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 991px) {
+      width: 400px;
+    }
+  }
+
+  .filter-title {
+    width: 8%;
+    display: flex;
+    align-items: center;
+    font-size: $font-normal;
+    color: $main-color;
+  }
+
+  .filter-body {
+    width: 85%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input.money {
+      height: 30px;
+      padding-left: 10px;
+      font-size: 1.25rem;
+      width: 70%;
+      border-radius: 5px;
+      border: 0.5px solid rgba(153, 153, 153, 0.704);
+
+      &::placeholder {
+        text-align: center;
+        font-size: 1.2vw;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .filter-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+
+    p {
+      display: flex;
+      align-items: center;
+      // margin: 0;
+      width: 30%;
+      margin-left: 3px;
+      font-size: $font-xs;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+    }
+
+    &:first-child {
+      .filter-option {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        div {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    &:last-child {
+      width: 40%;
+
+      p {
+        width: 30%;
+      }
+
+      label {
+        font-size: $font-xs;
+      }
+
+      .filter-option {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+
+        input[type='checkbox'] {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+
+  .filter-footer {
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    button {
+      font-size: $font-xs;
+      display: flex;
+      align-items: center;
+      margin: 5px;
+      height: 30px;
+      cursor: pointer;
+      border-radius: 5px;
+      color: rgba(0, 0, 0, 0.486);
+      background-color: rgb(51, 143, 185);
+      border: 1px solid rgba(51, 143, 185, 0.651);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      box-shadow: none;
+      color: rgb(255, 255, 255);
+
+      // &:hover {
+      // }
+
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+}

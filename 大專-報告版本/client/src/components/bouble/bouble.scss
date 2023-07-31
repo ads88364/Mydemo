@@ -1,0 +1,22 @@
+$font-big: 2.25rem;
+$font-normal: 2rem;
+$font-small: 1.75rem;
+$font-xs: 1.5rem;
+
+$main-color: #0b7597;
+$main-color2: #EABA71;
+$main-color3: #B8CDC8;
+
+
+#bouble {
+    :where(.css-dev-only-do-not-override-14wwjjs).ant-float-btn-circle .ant-float-btn-body {
+        background-color: $main-color;
+        width: 60px;
+        height: 60px;
+    }
+
+    :where(.css-dev-only-do-not-override-14wwjjs).ant-float-btn-group .ant-float-btn {
+        width: 60px;
+        height: 60px;
+    }
+}

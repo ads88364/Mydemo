@@ -1,0 +1,68 @@
+@import '../../assets/var.scss';
+
+.psg-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  // background-color:$main-color ;
+  color: $main-color;
+  font-size: $font-big;
+}
+#P-collect-page {
+  .product-body {
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+  .row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    .pd-link {
+      width: auto;
+    }
+    .D-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      margin-bottom: 15px;
+      background-color: rgba(255, 46, 46, 0.849);
+      border: 1px solid rgba(255, 46, 46, 0.849);
+      border-radius: 5px;
+      color: white;
+      font-size: $font-xs;
+      &:hover {
+        opacity: 0.7;
+      }
+      i {
+        margin-left: 5px;
+      }
+    }
+  }
+  a {
+    width: auto;
+  }
+  // h1 {
+  //   text-align: center;
+  //   margin: 200px 0;
+  // }
+}
+
+.no-collcet {
+  margin: 200px 0;
+  text-align: center;
+  h1 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  a {
+    color: rgba(32, 32, 255, 0.863);
+    &:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+  }
+}

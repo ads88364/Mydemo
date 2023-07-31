@@ -1,0 +1,88 @@
+[
+  {
+    "value": "camping",
+    "label": "露營",
+    "subOptions": [
+      { "value": "picnicTableChair", "label": "野餐桌椅" },
+      { "value": "outdoorStove", "label": "戶外爐具" },
+      { "value": "tent", "label": "帳篷" },
+      { "value": "moisturePad", "label": "防潮墊" },
+      { "value": "sleepingBag", "label": "睡袋" }
+    ]
+  },
+  {
+    "value": "mountain",
+    "label": "登山",
+    "subOptions": [
+      { "value": "climbingEquipment", "label": "攀岩器材" },
+      { "value": "trekkingPoles", "label": "登山杖" },
+      { "value": "gripEquipment", "label": "登山器材" },
+      { "value": "backpack", "label": "登山背包" },
+      { "value": "hikingShoes", "label": "登山鞋" }
+    ]
+  },
+  {
+    "value": "waterSport",
+    "label": "水上活動",
+    "subOptions": [
+      { "value": "paddleBoat", "label": "划艇" },
+      { "value": "kayak", "label": "獨木舟" },
+      { "value": "swimmingEquipment", "label": "其他用具" }
+    ]
+  },
+  {
+    "value": "cycling",
+    "label": "單車旅行",
+    "subOptions": [
+      { "value": "luggageRack", "label": "行李架" },
+      { "value": "helmet", "label": "安全帽" },
+      { "value": "bicycleAccessories", "label": "單車配件" },
+      { "value": "bicycle", "label": "單車" },
+      { "value": "bikeLight", "label": "車燈" }
+    ]
+  },
+  {
+    "value": "skiing",
+    "label": "滑雪",
+    "subOptions": [
+      { "value": "skiBoots", "label": "雪靴" },
+      { "value": "skiClothing", "label": "滑雪服" },
+      { "value": "snowboard", "label": "雪板" },
+      { "value": "skiAccessories", "label": "滑雪配件" },
+      { "value": "ski", "label": "滑雪板" }
+    ]
+  },  
+  {
+    "value": "diving",
+    "label": "潛水",
+    "subOptions": [
+      { "value": "divingMask", "label": "潛水面鏡" },
+      { "value": "divingSnorkel", "label": "潛水呼吸管" },
+      { "value": "divingFins", "label": "潛水蛙鞋" },
+      { "value": "divingSet", "label": "浮潛套裝" },
+      { "value": "divingAccessories", "label": "潛水配件" }
+    ]
+  },
+  {
+    "value": "sportsLeisure",
+    "label": "運動休閒",
+    "subOptions": [
+      { "value": "ballSports", "label": "球類運動" },
+      { "value": "fitnessEquipment", "label": "健身器材" },
+      { "value": "outdoorRecreation", "label": "戶外遊憩" },
+      { "value": "leisureEntertainment", "label": "休閒娛樂" },
+      { "value": "sportsAccessories", "label": "運動配件" }
+    ]
+  },
+  {
+    "value": "photography",
+    "label": "攝影器材",
+    "subOptions": [
+      { "value": "camera", "label": "相機" },
+      { "value": "lens", "label": "鏡頭" },
+      { "value": "tripod", "label": "三腳架" },
+      { "value": "photographyAccessories", "label": "攝影配件" },
+      { "value": "shootingEquipment", "label": "拍攝器材" }
+    ]
+  }
+]

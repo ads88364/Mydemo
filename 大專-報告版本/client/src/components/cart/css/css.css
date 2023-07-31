@@ -1,0 +1,233 @@
+:root {
+  --cartFontSize: 1.75rem;
+}
+body {
+  font-size: 2rem;
+}
+.dateFontSize {
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style: none;
+}
+.img1000 {
+  width: 70%;
+}
+.imgActive {
+  margin: 15px;
+  width: 40px;
+  height: 40px;
+}
+.imgActive2 {
+  width: 100%;
+}
+.img900 {
+  width: 900px;
+}
+.img100 {
+  width: 100px;
+}
+.borderclass {
+  border-block-start: 2px solid rgba(5, 5, 5, 0.6);
+}
+.borderclass_1 {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+.check {
+  border: 1px solid red;
+}
+.grid6 {
+  display: grid;
+  grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+}
+.gridActive {
+  display: grid;
+  grid-template-columns: 7% 15% 20% 15% 10% 10% 10% 10% 3%;
+}
+.gridActive2 {
+  display: grid;
+  grid-template-columns: 6% 64% 30%;
+}
+.gridActive3 {
+  display: grid;
+  grid-template-columns: 20% 23% 18% 15% 15% 8%;
+}
+.grid4 {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.title {
+  font-size: 3rem !important;
+}
+.subTitle {
+  font-size: 2.5rem !important;
+}
+.cartFontSize,
+.ant-row {
+  font-size: 1.75rem;
+}
+.changeActive {
+  background-color: rgba(255, 255, 255, 0) !important;
+  transition: 1s;
+}
+.no-close .ui-dialog-titlebar {
+  display: none;
+}
+.ui-dialog-buttopane {
+  height: 50px;
+  display: flex;
+  padding: auto;
+}
+.ui-button {
+  font-size: 1.5rem;
+}
+.cursorPointer {
+  cursor: pointer;
+}
+@keyframes change1 {
+  0% {
+    rotate: 0;
+  }
+
+  100% {
+    rotate: -90deg;
+  }
+}
+
+@keyframes change0 {
+  0% {
+    rotate: -90deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+}
+
+.test {
+  border: 3px solid red;
+}
+
+.steps .ant-steps-item-title {
+  font-size: 2rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+}
+
+.fontWeight {
+  font-weight: 900;
+}
+
+.ant-select,
+.ant-select-selector,
+.ant-select-selector .ant-select-selection-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  /* font-weight:900; */
+}
+.ant-select-selector {
+  font-size: 1.7rem;
+}
+
+.likeHr::before {
+  content: "";
+  border: 1px solid black;
+  width: 100%;
+}
+
+.line::after {
+  content: "";
+  border-top: 2px dashed black;
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.text-danger {
+  color: red;
+}
+
+.ChatBorderRadius {
+  border-radius: 200;
+  border-bottom-right-radius: 0;
+}
+
+.contentStyle {
+  text-align: center;
+  border-radius: 10px;
+  border: 6px solid #0b7597;
+  margin-top: 30px;
+}
+
+/* 按鈕顏色 */
+.btnColor {
+  background-color: #d1dddb;
+}
+.btnColor2 {
+  background-color: white;
+}
+/* 碰到按鈕 */
+.btnColor:hover,
+.btnColor2:hover {
+  background-color: #d1dddb9b;
+  border: 1px solid black;
+}
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 1.5rem;
+  }
+  .cartFontSize {
+    font-size: 1rem;
+  }
+  .dateFontSize {
+    font-size: 1rem;
+  }
+  .imgActive {
+    width: 20px;
+    height: 20px;
+  }
+  .steps .ant-steps-item-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .gridActive {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  .displayNone {
+    display: none;
+  }
+  .imgActive2 {
+    /* margin: 15px; */
+    display: none;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.scroll-container {
+  overflow: auto;
+  /* max-height: 300px; */
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 6px; /* 设置滚动条宽度 */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: transparent; /* 将滚动条颜色设置为透明，这样它就不可见 */
+}

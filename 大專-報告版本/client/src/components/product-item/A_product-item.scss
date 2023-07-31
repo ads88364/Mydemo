@@ -1,0 +1,223 @@
+@import '../../assets/var.scss';
+
+.product-item {
+  margin-bottom: 200px;
+
+  .product-item-main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .product-item-left {
+    width: 40%;
+    margin-right: 0px;
+
+    .slider-for {
+      height: 450px;
+      border: 1px solid rgba(132, 132, 132, 0.459);
+    }
+
+    .slider-for img {
+      width: 100%;
+    }
+
+    .slider-nav {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+
+      button {
+        background-color: white;
+        height: 20px;
+        border: 0.5px solid rgba(148, 148, 148, 0.373);
+      }
+    }
+
+    .slider-nav img {
+      width: 95%;
+
+      &:hover {
+        border: 2px solid #ffac37e9;
+      }
+    }
+  }
+
+  .product-item-right {
+    width: 55%;
+
+    .ant-space {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      justify-content: center;
+      .ant-picker {
+        border: 2px solid rgba(0, 0, 0, 0.445);
+        &:hover {
+          border-color: $main-color;
+        }
+        &:active {
+          border-color: $main-color;
+        }
+      }
+      .ant-picker-focused {
+        border-color: $main-color;
+      }
+      .ant-picker-active-bar {
+        background-color: $main-color;
+      }
+      .ant-picker-input input::placeholder {
+        color: rgba(0, 0, 0, 0.571);
+      }
+      div {
+        margin-right: 20px;
+      }
+    }
+    .item-text {
+      height: 50px;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+      span:first-child {
+        margin-right: 10px;
+      }
+      p {
+        font-size: $font-big;
+        font-weight: bold;
+        margin: 0;
+        line-height: 30px;
+        margin-bottom: 15px;
+      }
+      .spanout {
+        font-weight: normal;
+        font-size: $font-xs;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        span {
+          background-color: #82d1ff00;
+        }
+        span:first-child {
+          font-size: $font-normal;
+          color: orange;
+          margin-right: 10px;
+        }
+        a {
+          margin-left: 20px;
+          opacity: 0.6;
+        }
+      }
+      .spanout1 {
+        font-size: $font-xs;
+        opacity: 0.4;
+      }
+
+      &:nth-child(1) {
+        height: 80px;
+      }
+
+      &:nth-child(2) {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+
+        div {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .rentalstate1::before {
+        content: '  ';
+        margin-right: 10px;
+        display: block;
+        height: 20px;
+        width: 20px;
+        background-color: #82d1ff;
+        border-radius: 30px;
+      }
+      .rentalstate2::before {
+        content: '  ';
+        margin-right: 10px;
+        display: block;
+        height: 20px;
+        width: 20px;
+        background-color: #ff4848;
+        border-radius: 30px;
+      }
+
+      &:nth-child(5) {
+        display: flex;
+        align-items: center;
+
+        input {
+          margin-right: 20px;
+          margin-left: 10px;
+          border-radius: 5px;
+        }
+      }
+
+      &:nth-child(6) {
+        text-align: end;
+        color: rgb(0, 0, 0);
+        margin-right: 20px;
+        margin-top: 60px;
+        margin-bottom: 70px;
+        height: 20px;
+        font-size: $font-normal;
+      }
+
+      &:nth-child(7),
+      &:nth-child(8) {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+
+        div {
+          display: flex;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $main-color;
+          font-weight: bold;
+          color: white;
+          margin: 5px;
+          border-radius: 10px;
+          height: 50px;
+          width: 100%;
+          border: 1px solid;
+          &:hover {
+            opacity: 0.8;
+          }
+          i {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      &:nth-child(8) {
+        a {
+          background-color: white;
+          color: $main-color;
+          border-color: $main-color;
+          &:hover {
+            background-color: rgba(204, 204, 204, 0.26);
+          }
+        }
+      }
+    }
+  }
+  .product-text {
+    .p-body {
+      margin-bottom: 150px;
+    }
+    .norating {
+      text-align: center;
+      font-size: $font-big;
+    }
+  }
+}

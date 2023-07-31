@@ -1,0 +1,64 @@
+@import '../../assets/var.scss';
+
+.alert-box {
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  border: 1px solid $main-color;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  max-width: 500px;
+  width: 100%;
+
+  &.success {
+    background-color: $main-color;
+    color: white;
+    opacity: 0.9;
+  }
+
+  &.not {
+    background-color: rgb(255, 174, 0);
+    border-color: rgb(255, 174, 0);
+    color: white;
+    opacity: 0.9;
+  }
+
+  &.error {
+    background-color: rgb(50, 173, 91);
+    border-color: rgb(50, 173, 91);
+    color: white;
+    opacity: 0.9;
+  }
+
+  &.warning {
+    background-color: rgb(255, 45, 45);
+    border-color: rgb(255, 45, 45);
+    color: white;
+    opacity: 0.9;
+  }
+
+  .message {
+    margin: 0;
+    padding: 5px;
+    white-space: pre-wrap;
+    font-size: $font-normal;
+  }
+
+  .close-button {
+    border: none;
+    background: none;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+}

@@ -1,0 +1,88 @@
+$font-big: 2.25rem;
+$font-normal: 2rem;
+$font-small: 1.75rem;
+$font-xs: 1.5rem;
+$main-color: #0b7597;
+
+#tutorial-tip {
+  position: absolute;
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  z-index: 10000;
+  border-radius: 10px;
+
+  &::after {
+    border-color: transparent transparent #ffffff transparent;
+    border-style: solid solid solid solid;
+    border-width: 20px 20px;
+    bottom: 140px;
+    content: "";
+    height: 0px;
+    position: absolute;
+    right: 30px;
+    width: 0px;
+  }
+
+  /* Specific styles for each step */
+  &.step-1 {
+    /* Update the positioning and style for step 1 */
+    top: 15%;
+    right: 450px;
+
+    &::after {
+      bottom: 190px;
+      right: 70px;
+    }
+  }
+
+  &.step-2 {
+    top: 15%;
+    right: 300px;
+
+    &::after {
+      bottom: 190px;
+      right: 70px;
+    }
+  }
+
+  &.step-3 {
+    top: 15%;
+    right: 10px;
+
+    &::after {
+      bottom: 190px;
+      right: 10px;
+    }
+  }
+
+  &.step-4 {
+    bottom: 5%;
+    left: 10%;
+
+    &::after {
+      border-color: transparent #ffffff transparent transparent;
+      border-style: solid solid solid solid;
+      bottom: 10%;
+      left: -15%;
+    }
+  }
+
+  button {
+
+    padding: 10px 20px;
+    background-color: $main-color;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 150px;
+    font-size: $font-xs;
+
+  }
+  p{
+    font-size: $font-small;
+  }
+}

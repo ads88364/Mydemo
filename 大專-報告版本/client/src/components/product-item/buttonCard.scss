@@ -1,0 +1,108 @@
+@import '../../assets/var.scss';
+
+
+#BCard {
+  margin-bottom: 100px;
+  a{
+    width: 317px;
+    margin: 0 5px;
+    .card-img{
+      height: 95%;
+      width: 95%;
+      padding: 10px;
+    }
+  }
+  .rental-goods-group{
+    width: 317px;
+    margin: 0px 5px;
+  }
+  .B-title{
+    font-size: $font-big;
+    font-weight: bold;
+    color: #ffa600dd;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  
+  .B-title::after {
+    content: "";
+    position: absolute;
+    bottom: 40px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #ffa600dd;
+  }
+  .card-body{
+    h4{
+      // margin: 0;
+      text-align: left;
+    }
+    .card-text2{
+      span{
+        color: black;
+      }
+    }
+    .card-text{
+      color: black;
+    }
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width: 100%; // Center slide text vertically
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+
+  
+  .mySwiper3 {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+
+    
+
+    .swiper-slide {
+      margin: 0 !important;
+      height: 100%;
+      // opacity: 0.4;
+
+      
+
+      &.swiper-slide-thumb-active {
+        opacity: 1;
+        border: 2px solid rgba(42, 138, 170, 0.375);
+      }
+    }
+  }
+
+  
+}

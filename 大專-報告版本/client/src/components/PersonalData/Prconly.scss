@@ -1,0 +1,55 @@
+$font-big: 2.25rem;
+$font-normal: 2rem;
+$font-small: 1.75rem;
+$font-xs: 1.5rem;
+$main-color: #0b7597;
+
+#prconlyout {
+    z-index: 30;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+    border: 2px solid $main-color;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .prconlyTitle {
+        text-align: center;
+        width: 100%;
+        font-size: $font-small;
+        font-weight: bolder;
+    }
+
+    .ant-upload-list{
+        display: flex;
+        justify-content: center
+    }
+
+    .prconlBtn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+     button{
+        margin:5px;
+     }
+    }
+  
+    button {
+        padding: 10px 20px;
+        background-color: $main-color;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        width: 100px;
+
+      }
+}

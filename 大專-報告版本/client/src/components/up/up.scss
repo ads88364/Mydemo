@@ -1,0 +1,71 @@
+$primaryColor: #0B7597;
+$secondaryColor: #021434;
+$largeFontSize: 2.5rem;
+$mediumFontSize: 2rem;
+$medtwoFontSize: 1.75rem;
+$littleFontSize: 1.5rem;
+$margin: 20px;
+$paddingTop: 5vh;
+
+
+
+#fastout {
+    .psg-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 70px;
+        color: #0b7597;
+        font-size: 2.25rem;
+    }
+
+    .product-form {
+        width: 60%;
+        border: 3px solid #0b7597; // 设置边框样式和颜色
+        border-radius: 10px;
+        padding: 70px 0; // 可选：为表单添加一些内边距，使边框与内容之间有一定间距
+        margin-bottom: 100px;
+    }
+
+    :where(.css-dev-only-do-not-override-14wwjjs).ant-row {
+        align-items: center
+    }
+
+    :where(.css-dev-only-do-not-override-14wwjjs).ant-form-item .ant-form-item-label>label {
+        font-size: $littleFontSize;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    input[type="text"],
+    [type="number"] {
+        font-size: $littleFontSize;
+    }
+
+    button {
+        width: 125px;
+        height: 50px;
+
+        span {
+            font-size: $littleFontSize;
+        }
+    }
+
+    span,
+    textarea {
+        font-size: $littleFontSize;
+    }
+
+    .uploadimg {
+        display: flex;
+        justify-content: center;
+    }
+
+    // .ant-form-item-control-input-content {
+
+    // }
+
+}

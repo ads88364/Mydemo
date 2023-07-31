@@ -1,0 +1,118 @@
+/* footer 設定 */
+.footer-1 {
+    /* border: 2px solid black; */
+    background-color: #EABA71;
+    display: flex;
+    top: -50px;
+}
+
+/* footer 右邊連結設定 */
+.footer-4 {
+    /* border: 2px solid red; */
+    width: 50%;
+    display: grid;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+
+
+    grid-template-areas:
+        "C1 C5 C9"
+        "C2 C6 C10"
+        "C3 C7 C11"
+        "C4 C8 C12"
+}
+
+.C1 {
+    grid-area: C1;
+}
+
+.C2 {
+    grid-area: C2;
+}
+
+.C3 {
+    grid-area: C3;
+}
+
+.C4 {
+    grid-area: C4;
+}
+
+.C5 {
+    grid-area: C5;
+}
+
+.C6 {
+    grid-area: C6;
+}
+
+.C7 {
+    grid-area: C7;
+}
+
+.C8 {
+    grid-area: C8;
+}
+
+.C9 {
+    grid-area: C9;
+}
+
+.C10 {
+    grid-area: C10;
+}
+
+.C11 {
+    grid-area: C11;
+}
+
+.C12 {
+    grid-area: C12;
+}
+
+
+/* footer 右邊連結設定 */
+.footer-4 a {
+    color: rgba(0, 0, 0, 0.774);
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin: 10px;
+}
+
+.footer-4 a:hover {
+    color: #ffffffb4;
+    transition: 1s;
+    /* border: 2px solid red; */
+}
+
+.footer-4 p {
+    color: rgba(0, 0, 0, 0.797);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+/* footer 左邊設定 */
+.footer-3 {
+    /* border: 2px solid blue; */
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center */
+}
+
+.footer-3-logo{
+    width: 210px;
+    height: 80px;
+}
+
+.footer-3 p {
+    /* font-size: 1.5rem; */
+    color: rgb(0, 0, 0);
+}

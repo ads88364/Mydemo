@@ -1,0 +1,10 @@
+[
+    {
+        "paymentMethod" : "Visa卡"
+        ,"payTypeEngName":"Visa卡"
+    },
+    {
+        "paymentMethod" : "貨到付款"
+        ,"payTypeEngName":"貨到付款"
+    }
+]

@@ -1,0 +1,100 @@
+$font-big: 2.25rem;
+$font-normal: 2rem;
+$font-small: 1.75rem;
+$font-xs: 1.5rem;
+
+$main-color: #0b7597;
+
+#loginout {
+    background-color: #0b7597;
+    padding: 30px;
+
+    .slick-track {
+        height: 600px;
+        margin: 30px;
+
+        .slick-slide {
+            width: 80%;
+        }
+    }
+
+    .logintitle {
+        font-size: $font-big;
+        margin-bottom: 20px;
+        color: #0b7597;
+        font-weight: bold;
+        display: flex;
+        justify-content: center
+    }
+}
+
+#login {
+    border: #b9eeff 3px solid;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    height: 750px;
+
+
+    img {
+        height: 600px;
+        object-fit: cover;
+    }
+
+    #login-right {
+        margin-top: 70px;
+    }
+
+    .ant-form-item-required {
+        font-size: $font-small;
+    }
+
+    label {
+        font-weight: bolder;
+        color: #16778a
+    }
+
+    .ant-input-affix-wrapper {
+
+        border: 2px solid #16778a;
+    }
+
+    .ant-picker {
+        border: 2px solid #16778a;
+    }
+
+    .ant-select-selector {
+        border: 2px solid #16778a;
+    }
+
+   
+    Button {
+        font-size: $font-xs;
+    }
+  
+
+    .remember {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        a {
+            font-size: 1.2rem;;
+            color: #0b7597;
+            font-weight: bold;
+        }
+        a:hover{
+           color:#abc7d0
+        }
+        span{
+            font-size: 1.2rem;;
+            color: #0b7597;
+            font-weight: bold;
+        }
+        span:hover{
+            color:#abc7d0
+        }
+        
+    
+    }
+
+}

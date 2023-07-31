@@ -1,0 +1,59 @@
+@import '../../assets/var.scss';
+
+.rental-title {
+  height: 50px;
+  font-size: $font-small;
+  display: flex;
+  align-items: center;
+
+  // background-color: antiquewhite;
+  @media screen and (max-width: 1000px) {
+    font-size: 2vw;
+  }
+
+  span {
+    margin-left: 10px;
+  }
+
+  .sort-group {
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+
+    .sort-item {
+      margin-left: 10px;
+
+      button {
+        color: $main-color;
+        border: 0px;
+        background-color: #0b749700;
+        font-size: $font-small;
+        &:hover {
+          border-bottom: 2px solid #0b7597;
+          padding-bottom: 1px;
+        }
+
+        &:active {
+          opacity: 0.8;
+        }
+
+        &:focus {
+          border-bottom: 2px solid #0b7597;
+          padding-bottom: 1px;
+        }
+      }
+    }
+  }
+}
+
+.rental-body {
+  margin-top: 20px;
+
+  .rental-goods {
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+}

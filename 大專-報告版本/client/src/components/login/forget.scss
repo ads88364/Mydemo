@@ -1,0 +1,59 @@
+$font-big: 2.25rem;
+$font-normal: 2rem;
+$font-small: 1.75rem;
+$font-xs: 1.5rem;
+
+$main-color: #0b7597;
+$main-color2: #EABA71;
+$main-color3: #B8CDC8;
+
+
+#forgetout {
+    height: 100%;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+
+    .emailtitle {
+        font-size: $font-normal;
+        display: flex;
+        justify-content: center;
+        background-color: $main-color;
+        color: #fff;
+        padding: 20px 0;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+
+        .email {
+
+            font-size: $font-small;
+            font-weight: bold;
+        }
+
+        input {
+            font-size: $font-small;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #D9D9D9;
+            // color: #fff;
+            font-size: $font-xs;
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 5px 20px;
+            border: none;
+        }
+        button:hover{
+            background-color: #dfdfdf;
+        }
+    }
+}

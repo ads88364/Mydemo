@@ -1,0 +1,376 @@
+$primaryColor: #0B7597;
+$secondaryColor: #021434;
+$largeFontSize: 2.5rem;
+$mediumFontSize: 2rem;
+$medtwoFontSize: 1.75rem;
+$littleFontSize: 1.5rem;
+$margin: 20px;
+$paddingTop: 5vh;
+
+.bgset {
+  position: relative;
+  width: 100%;
+  height: 1200px;
+  // height: 100vh;
+  background-image: url('../../../server/public/img/wave1.png');
+  // background-size: 100% auto;
+  /* 调整此处 */
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: $paddingTop;
+
+  .bdset {
+    // overflow: auto;
+    // height: 95%;
+    bottom: 100px;
+  }
+
+  .text {
+    text-align: center;
+    color: $secondaryColor;
+    font-size: $mediumFontSize;
+    margin: $margin;
+  }
+
+  .mctitle {
+    color: $primaryColor;
+    font-size: $largeFontSize;
+    font-weight: bold;
+    margin: $margin;
+    text-shadow: -1px -2px 0 #ffffff,
+              1px -1px 0 #ffffff,
+              -1px 1px 0 #ffffff,
+              1px 1px 0 #ffffff;
+  }
+
+  .btnset {
+    display: flex;
+    // justify-content: flex-start;
+    // justify-content: space-around;
+    align-items: center;
+  }
+
+  #mainbtn {
+    // margin: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: $littleFontSize;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+
+    &.active {
+      /* 被点击按钮的样式 */
+      background-color: #0B7597;
+      color: white;
+    }
+  }
+
+  // ============================ 訂單詳細按鈕 ============================
+  #morebtn {
+    font-size: $littleFontSize;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: $medtwoFontSize;
+    border: none;
+  }
+
+  // ============================ 取消訂單按鈕 ============================
+  #actbtn {
+    color: orangered;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: $medtwoFontSize;
+    border: none;
+  }
+
+  // ============================ 資料顯示區塊 ============================
+  .order-component {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    /* 水平置中 */
+  }
+
+  .order-table {
+    // 使表格框框固定大小
+    width: 92vw;
+    // 離按鈕的距離
+    margin-top: 50px;
+    border-collapse: collapse;
+    position: relative;
+    // ===================毛玻璃=========================
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    border: 0px solid rgba(255, 255, 255, 0.18);
+    box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    border-radius: 17px;
+    -webkit-border-radius: 17px;
+
+    // ============= 偽元素 =============
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      z-index: -1;
+      background-color: rgba(255, 255, 255, 0.571);
+      backdrop-filter: blur(21px);
+      -webkit-backdrop-filter: blur(21px);
+      border: 0px solid rgba(255, 255, 255, 0.18);
+      box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+      -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+      border-radius: 17px;
+      -webkit-border-radius: 17px;
+    }
+
+    th,
+    td {
+      padding: 20px;
+    }
+
+    th {
+      font-weight: bold;
+      text-align: center;
+      font-size: $mediumFontSize;
+    }
+
+    td {
+      font-size: $medtwoFontSize;
+      text-align: center;
+    }
+
+    #trtd:hover {
+      background-color: #02143464;
+    }
+  }
+
+  // ============================ 商品細節的資料顯示區塊 ============================
+
+  .tbscss {
+    // 父容器样式
+
+    // 按钮居中样式
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    // 返回按钮样式
+    button#back {
+      font-size: $littleFontSize;
+      border: none;
+      border-radius: 20px;
+      padding: 5px 10px;
+      margin-top: 50px;
+
+      &:hover {
+        background-color: #0B7597;
+        color: white;
+      }
+
+    }
+  }
+
+
+  // ============================ 取消提示框 ============================
+
+  .conf-mol {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: rgba(0, 0, 0, 0.5);
+    /* 添加半透明背景 */
+  }
+
+  .conf-cont {
+    background-color: #fff;
+    padding: 20px;
+  }
+
+  .conf-btn {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #chkbtn {
+    font-size: $littleFontSize;
+    background-color: #0B7597;
+    color: white;
+    border: none;
+    border-radius: 20px;
+  }
+
+  // ============================ 商品詳細 ============================
+
+  #proimg {
+    width: 10vw;
+  }
+
+  #trititle {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    width: 92vw;
+    // 離按鈕的距離
+    margin-top: 50px;
+    border-collapse: collapse;
+    position: relative;
+    // ============================================
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    border: 0px solid rgba(255, 255, 255, 0.18);
+    box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    border-radius: 17px;
+    -webkit-border-radius: 17px;
+
+    // ============= 偽元素 =============
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      z-index: -1;
+      background-color: rgba(255, 255, 255, 0.571);
+      backdrop-filter: blur(21px);
+      -webkit-backdrop-filter: blur(21px);
+      border: 0px solid rgba(255, 255, 255, 0.18);
+      box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+      -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+      border-radius: 17px;
+      -webkit-border-radius: 17px;
+    }
+  }
+
+  #tridet {
+    display: flex;
+    gap: 50px;
+
+    p {
+      font-size: $littleFontSize;
+
+    }
+  }
+
+  // 申訴按鈕
+  #qubtn {
+    font-size: $littleFontSize;
+    background-color: rgba(0, 0, 0, 0);
+    color: orange;
+    font-weight: bold;
+    font-size: $medtwoFontSize;
+    border: none;
+  }
+
+  .modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 半透明黑色背景 */
+    z-index: 9999;
+  }
+
+  .modal-open {
+    overflow: hidden;
+    /* 禁止滚动页面 */
+  }
+
+
+  // 分頁按鈕
+  .btncon {
+    display: flex;
+    justify-content: center;
+    /* 將按鈕置中 */
+    margin-top: 20px;
+
+    /* 可選：設置按鈕與表格之間的間距 */
+    #back {
+      margin: 0 5px;
+      /* 可選：設置按鈕之間的間距 */
+    }
+  }
+
+  .proimg {
+    width: 25px;
+  }
+
+}
+
+// 請先登入
+.logbg {
+  position: relative;
+  height: 60vh;
+  background-image: url('../../../server/public/img/wave1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20vh;
+
+  .glass {
+    padding-top: 10vh;
+    padding-left: 20vw;
+    width: 50%;
+    height: 50%;
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    border: 0px solid rgba(255, 255, 255, 0.18);
+    box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    border-radius: 17px;
+    -webkit-border-radius: 17px;
+  }
+
+  .ml11 {
+    font-weight: 700;
+    font-size: $largeFontSize;
+  }
+
+  .ml11 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+
+  .ml11 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #fff;
+    transform-origin: 0 50%;
+  }
+
+  .ml11 .line1 {
+    top: 0;
+    left: 0;
+  }
+
+  .ml11 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+}
